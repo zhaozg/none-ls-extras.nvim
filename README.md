@@ -29,8 +29,10 @@ null_ls.setup {
     sources = {
         require("none-ls.diagnostics.cpplint"),
         require("none-ls.diagnostics.luacheck"),
+        require("none-ls.diagnostics.shellcheck"),
         require("none-ls.formatting.jq"),
         require("none-ls.code_actions.eslint"),
+        require("none-ls.code_actions.shellicheck"),
         ...
     }
 }
@@ -41,6 +43,7 @@ Use `require("none-ls.METHOD.TOOL")` instead of `null_ls.builtins.METHOD.TOOL` t
 ## Include Projects
 
 - [none-ls-luacheck.nvim](https://github.com/gbprod/none-ls-luacheck.nvim)
+- [none-ls-shellcheck.nvim](https://github.com/gbprod/none-ls-shellcheck.nvim)
 
 ## Related projects
 
@@ -48,6 +51,5 @@ You can search for sources via the [`none-ls-sources` topic](https://github.com/
 
 - [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)
 - [none-ls-php.nvim](https://github.com/gbprod/none-ls-php.nvim)
-- [none-ls-shellcheck.nvim](https://github.com/gbprod/none-ls-shellcheck.nvim)
 - [none-ls-psalm.nvim](https://github.com/gbprod/none-ls-psalm.nvim)
 - [none-ls-ecs.nvim](https://github.com/gbprod/none-ls-ecs.nvim)
