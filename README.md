@@ -1,7 +1,7 @@
 # none-ls-extras.nvim
 
-Extra sources for
-[nvimtools/none-ls.nvim](https://github.com/nvimtools/none-ls.nvim).
+Extra sources for [none-ls-extras.nvim](https://github.com/nvimtools/none-ls-extras.nvim)
+for [nvimtools/none-ls.nvim](https://github.com/nvimtools/none-ls.nvim).
 
 ## 📦 Installation
 
@@ -14,6 +14,7 @@ This should be used as a dependency of **none-ls.nvim**.
     "nvimtools/none-ls.nvim",
     dependencies = {
       "nvimtools/none-ls-extras.nvim",
+      "zhaozg/none-ls-extras.nvim",
     },
   }
 ```
@@ -27,12 +28,14 @@ local null_ls = require("null-ls")
 
 null_ls.setup {
     sources = {
-        require("none-ls.diagnostics.cpplint"),
+        -- in zhaozg/none-ls-extras.nvim
         require("none-ls.diagnostics.luacheck"),
         require("none-ls.diagnostics.shellcheck"),
+        require("none-ls.code_actions.shellicheck"),
+        -- in nvimtools/none-ls-extras.nvim
+        require("none-ls.diagnostics.cpplint"),
         require("none-ls.formatting.jq"),
         require("none-ls.code_actions.eslint"),
-        require("none-ls.code_actions.shellicheck"),
         ...
     }
 }
@@ -50,6 +53,4 @@ Use `require("none-ls.METHOD.TOOL")` instead of `null_ls.builtins.METHOD.TOOL` t
 You can search for sources via the [`none-ls-sources` topic](https://github.com/topics/none-ls-sources).
 
 - [none-ls.nvim](https://github.com/nvimtools/none-ls.nvim)
-- [none-ls-php.nvim](https://github.com/gbprod/none-ls-php.nvim)
-- [none-ls-psalm.nvim](https://github.com/gbprod/none-ls-psalm.nvim)
-- [none-ls-ecs.nvim](https://github.com/gbprod/none-ls-ecs.nvim)
+- [none-ls-extras.nvim](https://github.com/nvimtools/none-ls-extras.nvim)
